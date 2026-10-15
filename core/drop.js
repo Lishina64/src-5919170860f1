@@ -38,9 +38,9 @@ function settle(ball,now){var mult=table()[ball.pocket];var prize=cents(ball.sta
 pretty(prize)+" back in the bank.","up");}else{say("Centre pocket: "+mult+"× returns "+
 pretty(prize)+".","down");}
 if(bank<1&&balls.length===0){say("Bank is empty — tap Refill for fresh credits.","down");}}
-function logDrop(mult){var chip=document.createElement("span");chip.className="drop-chip-34ac7dd6"+
+function logDrop(mult){var chip=document.createElement("span");chip.className="drop-chip-59525884"+
 (mult>=10?" drop-chip-big":mult>=1?" drop-chip-up":" drop-chip-down");chip.textContent=mult+"×";trailEl.insertBefore(chip,trailEl.firstChild);while(trailEl.children.length>TRAIL_MAX){trailEl.removeChild(trailEl.lastChild);}}
-function say(text,mood){noteEl.textContent=text;noteEl.classList.remove("drop-note-up","drop-note-down");if(mood==="up"){noteEl.classList.add("drop-note-up-34ac7dd6");}else if(mood==="down"){noteEl.classList.add("drop-note-down-34ac7dd6");}}
+function say(text,mood){noteEl.textContent=text;noteEl.classList.remove("drop-note-up","drop-note-down");if(mood==="up"){noteEl.classList.add("drop-note-up-59525884");}else if(mood==="down"){noteEl.classList.add("drop-note-down-59525884");}}
 function readStake(){var v=Math.floor(Number(stakeEl.value));return isFinite(v)?v:0;}
 function clampStake(){var v=readStake();if(v<1){v=1;}
 if(v>STAKE_CAP){v=STAKE_CAP;}
